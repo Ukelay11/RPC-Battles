@@ -1,29 +1,7 @@
-<html>
-  <head>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-
-    <script
-      type="text/javascript"
-      src="https://static.codehs.com/gulp/27d4d75fbba84f7353aa3366cbddaf2aefeed90f/chs-js-lib/chs.js"
-    ></script>
-
-   
-      
-  </head>
-
-  <body>
-    
-
-    <canvas width="400" height="500" class="codehs-editor-canvas"></canvas>
-    <pre id="console"></pre>
-
-    <script>
-      window.onload = function() {
-
               var picture = new WebImage("https://codehs.com/uploads/642b2124a2d0195d6461fffa41d0a064");
       setFullscreen();
-      picture.setSize(getHeight() * 0.83030949839 - 83.0309 ,getHeight() - 100);
-      picture.setPosition(getWidth() / 2 - picture.getWidth() / 2 ,30);
+      picture.setSize(getHeight() * 0.83030949839 / 1.5  ,getHeight() / 1.5);
+      picture.setPosition(getWidth() / 2 - picture.getWidth() / 2 ,getHeight() / 2 - getHeight() / 1.5 / 2);
       add(picture);
       println(getHeight() +"," + getWidth());
 
@@ -43,17 +21,8 @@
       var dateText = new Text(date,"50pt Arial ");
 
       dateText.setColor("#575757");
-      var size = 0.05 * getHeight() - 5.57;
+      var size = 0.05 * getHeight() - 10.57;
       dateText.setFont(size + "pt Arial");
       dateText.resetDimensions();
-      dateText.setPosition((getWidth() / 2 ) - (dateText.getWidth() / 2),0.3 * getHeight() - 4.91);
+      dateText.setPosition((getWidth() / 2 ) - (dateText.getWidth() / 2),0.4 * getHeight() - 15.91);
       add(dateText);
-
-
-          if (typeof start === 'function') {
-              start();
-          }
-      };
-    </script>
-  </body>
-</html>
